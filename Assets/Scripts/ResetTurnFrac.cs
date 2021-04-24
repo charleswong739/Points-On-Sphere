@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class ResetTurnFrac : MonoBehaviour
 {
+    public GeneratePoints controller;
+
     public void reset () {
-        this.GetComponent<Slider>().value = (1 + Mathf.Sqrt(5)) / 2f;
+        float val = (1 + Mathf.Sqrt(5)) / 2f;
+        this.GetComponent<Slider>().value = val;
+        controller.RefreshTurnFrac(val);
     }
 }

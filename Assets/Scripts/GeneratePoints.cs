@@ -75,7 +75,7 @@ public class GeneratePoints : MonoBehaviour
 
     public void RefreshNumPoints(float numPoints)
     {
-        if (numPoints < 300) {
+        if (numPoints <= 300) {
 
             for (int i = 0; i < numPoints; i++) {
             float phi = Mathf.Acos(1 - (2 * (i + 0.5f) / ((float) numPoints)));
